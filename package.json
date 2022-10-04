@@ -1,0 +1,39 @@
+{
+  "name": "maker-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "ladle serve",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "generateIcons": "node src/components/icons/generateIcons.js"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@ladle/react": "^2.4.3",
+    "@makerdao/dai-ui-icons": "^0.0.66",
+    "@makerdao/dai-ui-icons-branding": "^0.0.66",
+    "@types/react": "^18.0.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "theme-ui": "^0.15.1"
+  },
+  "description": "Maker DAO UI React components",
+  "repository": "https://github.com/ofqwx/maker-ui",
+  "author": "Emmet Brown",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^18.8.1",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1"
+  }
+}
