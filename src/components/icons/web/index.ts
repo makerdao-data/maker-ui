@@ -50,7 +50,6 @@ export { default as PartnershipIcon } from './PartnershipIcon';
 export { default as WhitePaperIcon } from './WhitePaperIcon';
 export { default as FacebookIcon } from './FacebookIcon';
 export { default as MediumIcon } from './MediumIcon';
-export { default as RocketchatIcon } from './RocketchatIcon';
 export { default as RedditIcon } from './RedditIcon';
 export { default as TelegramIcon } from './TelegramIcon';
 export { default as TwitterIcon } from './TwitterIcon';
