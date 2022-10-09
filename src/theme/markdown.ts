@@ -1,4 +1,4 @@
-import { ThemeUIStyleObject } from "theme-ui";
+import { ThemeUIStyleObject } from 'theme-ui';
 
 export const markdown: Record<string, ThemeUIStyleObject> = {
   default: {
@@ -46,16 +46,16 @@ export const markdown: Record<string, ThemeUIStyleObject> = {
     th: {
       fontWeight: 600,
       padding: '6px 13px',
-      border: theme => `1px solid ${theme.colors.secondary}`
+      border: (theme) => `1px solid ${theme.colors.secondary}`
     },
     td: {
       padding: '6px 13px',
-      border: theme => `1px solid ${theme.colors.secondary}`
+      border: (theme) => `1px solid ${theme.colors.secondary}`
     },
 
     tr: {
       backgroundColor: 'surface',
-      borderTop: theme => `1px solid ${theme.colors.secondary}`,
+      borderTop: (theme) => `1px solid ${theme.colors.secondary}`,
       ':nth-of-type(2n)': {
         backgroundColor: 'background'
       }

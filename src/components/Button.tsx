@@ -1,4 +1,7 @@
-import { Button as ThemeUIButton, ButtonProps as ThemeUIButtonProps } from 'theme-ui';
+import {
+  Button as ThemeUIButton,
+  ButtonProps as ThemeUIButtonProps
+} from 'theme-ui';
 import { ButtonVariant } from '../theme/buttons';
 
 type ButtonProps = ThemeUIButtonProps & {

@@ -1,4 +1,16 @@
-export const badges = {
+import { ThemeUICSSObject } from 'theme-ui';
+
+export type BadgeVariant =
+  | 'primary'
+  | 'circle'
+  | 'solidCircle'
+  | 'success'
+  | 'notice'
+  | 'warning';
+
+export type BadgeTheme = Record<BadgeVariant, ThemeUICSSObject>;
+
+export const badges: BadgeTheme = {
   primary: {
     variant: 'text.caps',
     fontSize: 1,

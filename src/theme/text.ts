@@ -1,6 +1,23 @@
-import { ThemeUIStyleObject } from "theme-ui";
+import { ThemeUIStyleObject } from 'theme-ui';
 
-export const text: Record<string, ThemeUIStyleObject> = {
+export type TextVariant =
+  | 'heading'
+  | 'smallCaps'
+  | 'secondary'
+  | 'largeHeading'
+  | 'mediumHeading'
+  | 'smallHeading'
+  | 'microHeading'
+  | 'largeText'
+  | 'text'
+  | 'error'
+  | 'smallText'
+  | 'microText'
+  | 'caps';
+
+export type TextTheme = Record<TextVariant, ThemeUIStyleObject>;
+
+export const text: TextTheme = {
   heading: {
     fontFamily: 'heading',
     lineHeight: 'heading',

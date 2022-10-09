@@ -1,0 +1,17 @@
+{
+  "include": ["src", "scripts/generate-icons.mjs"],
+  "compilerOptions": {
+    "declaration": true,
+    "jsx": "react-jsx",
+    "lib": ["es2018", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2018"
+  },
+  "exclude": ["node_modules"]
+}

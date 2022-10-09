@@ -1,4 +1,25 @@
-export const forms = {
+import { ThemeUICSSObject } from 'theme-ui';
+
+export type InputVariant = 'input' | 'inputError';
+export type LabelVariant = 'label' | 'thinLabel';
+export type TextareaVariant = 'textarea' | 'textareaError';
+export type SelectVariant = 'select';
+export type SliderVariant = 'slider' | 'sliderActive';
+export type RadioVariant = 'radio';
+export type CheckboxVariant = 'checkbox';
+
+export type FormVariant =
+  | InputVariant
+  | LabelVariant
+  | TextareaVariant
+  | SelectVariant
+  | SliderVariant
+  | RadioVariant
+  | CheckboxVariant;
+
+export type FormTheme = Record<FormVariant, ThemeUICSSObject>;
+
+export const forms: FormTheme = {
   label: {
     fontSize: 2,
     fontWeight: 'bold',

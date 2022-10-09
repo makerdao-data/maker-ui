@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const Svg = styled.svg``
+const Svg = styled.svg``;
 
 Svg.defaultProps = {
   version: '1.1',

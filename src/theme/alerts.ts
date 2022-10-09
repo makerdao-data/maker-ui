@@ -1,4 +1,17 @@
-export const alerts = {
+import { ThemeUICSSObject } from 'theme-ui';
+
+export type AlertVariant =
+  | 'primary'
+  | 'success'
+  | 'notice'
+  | 'warning'
+  | 'banner'
+  | 'bannerNotice'
+  | 'bannerWarning';
+
+export type AlertTheme = Record<AlertVariant, ThemeUICSSObject>;
+
+export const alerts: AlertTheme = {
   primary: {
     fontSize: 2,
     borderRadius: 'small',

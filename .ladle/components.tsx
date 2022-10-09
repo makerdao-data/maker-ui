@@ -1,4 +1,10 @@
-import { ActionType, GlobalProvider, ThemeState, useLadleContext } from '@ladle/react';
+import {
+  ActionType,
+  GlobalProvider,
+  ThemeState,
+  useLadleContext
+} from '@ladle/react';
+import React from 'react';
 import { useEffect } from 'react';
 import { ThemeProvider, useColorMode } from 'theme-ui';
 import theme from '../src/theme';
@@ -19,25 +25,25 @@ function ColorModeForwarder({ children }) {
     setThemeUIColorMode(globalState.theme);
   }, [globalState.theme]);
 
-
   // Listen system color scheme on first render and listen to changes
   useEffect(() => {
-    const darkModeQuery = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeQuery =
+      window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
 
     const prefersDark = darkModeQuery.matches;
 
     if (prefersDark) {
       dispatch({
         type: ActionType.UpdateTheme,
-        value: ThemeState.Dark,
-      })
+        value: ThemeState.Dark
+      });
     }
 
     darkModeQuery.addEventListener('change', (event) => {
       dispatch({
         type: ActionType.UpdateTheme,
-        value: event.matches ? ThemeState.Dark : ThemeState.Light,
-      })
+        value: event.matches ? ThemeState.Dark : ThemeState.Light
+      });
     });
   }, []);
 

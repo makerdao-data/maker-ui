@@ -13,9 +13,9 @@ export type ButtonVariant =
   | 'smallOutline'
   | 'textual';
 
-export type ButtonsTheme = Record<ButtonVariant, ThemeUIStyleObject>;
+export type ButtonTheme = Record<ButtonVariant, ThemeUIStyleObject>;
 
-export const buttons: ButtonsTheme = {
+export const buttons: ButtonTheme = {
   primary: {
     borderRadius: 'round',
     cursor: 'pointer',

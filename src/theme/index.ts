@@ -1,20 +1,26 @@
 import { alerts } from './alerts';
-import { badges } from './badges';
-import { buttons, ButtonsTheme } from './buttons';
-import { colors } from './colors';
-import { cards } from './cards';
-import { forms } from './forms';
+import { badges, BadgeTheme } from './badges';
+import { buttons, ButtonTheme } from './buttons';
+import { colors, ColorTheme } from './colors';
+import { cards, CardTheme } from './cards';
+import { forms, FormTheme } from './forms';
 import { styles } from './styles';
-import { text } from './text';
+import { text, TextTheme } from './text';
 import { Theme as ThemeUiTheme, ThemeUIStyleObject } from 'theme-ui';
-import {markdown as markdownTheme } from '../theme/markdown';
+import { markdown as markdownTheme } from '../theme/markdown';
 import ratioSizes from './ratioSizes';
 
 export type MarkdownVariant = keyof typeof markdownTheme;
 export type DialogTarget = 'desktop' | 'mobile';
 
-interface Theme extends Omit<ThemeUiTheme, 'buttons'> {
-  buttons?: ButtonsTheme;
+interface Theme
+  extends Omit<ThemeUiTheme, 'buttons, text, cards, badges, colors, forms'> {
+  buttons?: ButtonTheme;
+  text?: TextTheme;
+  cards?: CardTheme;
+  badges?: BadgeTheme;
+  colors?: ColorTheme;
+  forms?: FormTheme;
   useBodyStyles: boolean;
   modal?: Record<string, ThemeUIStyleObject>;
   listboxes?: Record<string, ThemeUIStyleObject>;
@@ -30,7 +36,8 @@ const theme: Theme = {
 
   fonts: {
     body: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
-    heading: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
+    heading:
+      '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
     monospace: 'monospace'
   },
 
@@ -65,7 +72,8 @@ const theme: Theme = {
 
   shadows: {
     faint: '0px 2px 7px #EAEFF440',
-    floater: '0px 20px 40px rgba(219, 227, 237, 0.4), 0px 1px 3px rgba(190, 190, 190, 0.25)'
+    floater:
+      '0px 20px 40px rgba(219, 227, 237, 0.4), 0px 1px 3px rgba(190, 190, 190, 0.25)'
   },
 
   sizes: {
@@ -145,7 +153,12 @@ const theme: Theme = {
         cursor: 'pointer',
         '&:focus-within': { outline: 'none' }
       },
-      list: { 'li[aria-selected="true"]': { backgroundColor: 'primary', width: '100%' } }
+      list: {
+        'li[aria-selected="true"]': {
+          backgroundColor: 'primary',
+          width: '100%'
+        }
+      }
     }
   },
   menubuttons: {
@@ -179,18 +192,18 @@ const theme: Theme = {
       mb: 0,
       borderTopLeftRadius: 'roundish',
       borderTopRightRadius: 'roundish',
-      border: (theme) => `1px solid ${theme.colors.secondaryMuted}`,
+      border: (theme) => `1px solid ${theme.colors?.secondaryMuted}`,
       px: 3,
       py: 4,
-      background: (theme) => theme.colors.surface
+      background: (theme) => theme.colors?.surface
     },
 
     desktop: {
-      border: (theme) => `1px solid ${theme.colors.secondaryMuted}`,
+      border: (theme) => `1px solid ${theme.colors?.secondaryMuted}`,
       borderRadius: '8px',
       boxShadow: '0px 10px 50px hsla(0, 0%, 0%, 0.33)',
       width: '50em',
-      background: (theme) => theme.colors.surface
+      background: (theme) => theme.colors?.surface
     }
   }
 };

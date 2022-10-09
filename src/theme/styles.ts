@@ -1,5 +1,4 @@
-import { icons } from "./icons";
-import { markdown } from "./markdown";
+import { markdown } from './markdown';
 
 export const styles = {
   spinner: {
@@ -79,6 +78,5 @@ export const styles = {
     px: 1
   },
 
-  markdown,
-  icons,
+  markdown
 };
