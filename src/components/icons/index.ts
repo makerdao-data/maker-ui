@@ -50,7 +50,7 @@ export { PartnershipIcon } from './web';
 export { WhitePaperIcon } from './web';
 export { FacebookIcon } from './web';
 export { MediumIcon } from './web';
-// export { RocketChatIcon } from './web';
+export { RocketChatIcon } from './web';
 export { RedditIcon } from './web';
 export { TelegramIcon } from './web';
 export { TwitterIcon } from './web';
