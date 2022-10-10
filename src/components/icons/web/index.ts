@@ -69,7 +69,7 @@ export { default as ImmunefiIcon } from './ImmunefiIcon';
 export { default as GovIntroIcon } from './GovIntroIcon';
 export { default as GovForumIcon } from './GovForumIcon';
 export { default as GovCallsIcon } from './GovCallsIcon';
-export { default as RocketChatIcon } from './RocketChatIcon';
+// export { default as RocketChatIcon } from './RocketChatIcon';
 export { default as WeChatIcon } from './WeChatIcon';
 export { default as BallotIcon } from './BallotIcon';
 export { default as PencilIcon } from './PencilIcon';
