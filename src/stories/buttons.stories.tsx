@@ -1,6 +1,6 @@
 import { Button } from '../components';
 import { Box } from 'theme-ui';
-// import { MakerIcon } from '../components';
+import { MakerIcon } from '../components/icons';
 
 export function ButtonPrimary() {
   return (
@@ -29,13 +29,13 @@ export function CloseButton() {
   return <Button variant="close">X</Button>;
 }
 
-// export function IconButton() {
-//   return (
-//     <Button variant="icon">
-//       <MakerIcon />
-//     </Button>
-//   );
-// }
+export function IconButton() {
+  return (
+    <Button variant="icon">
+      <MakerIcon />
+    </Button>
+  );
+}
 
 export function ButtonSmall() {
   return (
