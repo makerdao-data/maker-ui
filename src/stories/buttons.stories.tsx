@@ -1,6 +1,6 @@
 import { Button } from '../components';
 import { Box } from 'theme-ui';
-import { MakerIcon } from '../components/icons';
+import { MakerIcon } from '../components';
 
 export function ButtonPrimary() {
   return (

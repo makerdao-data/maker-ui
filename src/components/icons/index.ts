@@ -55,7 +55,6 @@ export { RedditIcon } from './web';
 export { TelegramIcon } from './web';
 export { TwitterIcon } from './web';
 export { YoutubeIcon } from './web';
-export { WechatIcon } from './web';
 export { MakerduxIcon } from './web';
 export { MkrLockedIcon } from './web';
 export { GasIcon } from './web';
