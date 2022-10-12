@@ -6,13 +6,46 @@ import {
 } from '@ladle/react';
 import React from 'react';
 import { useEffect } from 'react';
-import { ThemeProvider, useColorMode } from 'theme-ui';
+import { ThemeProvider, useColorMode, Box, Link } from 'theme-ui';
+import { GithubIcon, MakerColorIcon, Text } from '../src/components';
 import theme from '../src/theme';
 
 export const Provider: GlobalProvider = ({ children, globalState }) => {
   return (
     <ThemeProvider theme={theme}>
-      <ColorModeForwarder>{children}</ColorModeForwarder>
+      <ColorModeForwarder>
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Box
+            sx={{
+              display: 'flex',
+              maxHeight: '95px',
+              overflow: 'hidden',
+              justifyContent: 'space-between',
+              marginBottom: '4rem'
+            }}>
+            <Box sx={{ display: 'flex', marginLeft: '-10px' }}>
+              <MakerColorIcon width={128} height={128} />
+              <Text variant="microHeading" sx={{ alignSelf: 'end' }}>
+                UI
+              </Text>
+            </Box>
+
+            <Link
+              href="https://github.com/ofqwx/maker-ui"
+              target="_blank"
+              sx={{
+                alignSelf: 'end',
+                color: 'inherit',
+                textDecoration: 'inherit',
+                cursor: 'pointer'
+              }}>
+              <GithubIcon width={32} height={32} />
+            </Link>
+          </Box>
+
+          {children}
+        </Box>
+      </ColorModeForwarder>
     </ThemeProvider>
   );
 };
