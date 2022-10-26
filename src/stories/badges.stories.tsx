@@ -4,14 +4,6 @@ export function PrimaryBadge() {
   return <Badge variant="primary">Badge</Badge>;
 }
 
-export function CircleBadge() {
-  return <Badge variant="circle" />;
-}
-
-export function SolidCircleBadge() {
-  return <Badge variant="solidCircle" />;
-}
-
 export function SuccessBadge() {
   return <Badge variant="success">Badge</Badge>;
 }

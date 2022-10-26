@@ -7,14 +7,16 @@ import { forms, FormTheme } from './forms';
 import { styles } from './styles';
 import { text, TextTheme } from './text';
 import { Theme as ThemeUiTheme, ThemeUIStyleObject } from 'theme-ui';
-import { markdown as markdownTheme } from '../theme/markdown';
 import ratioSizes from './ratioSizes';
+import { transparentize } from '@theme-ui/color';
 
-export type MarkdownVariant = keyof typeof markdownTheme;
 export type DialogTarget = 'desktop' | 'mobile';
 
-interface Theme
-  extends Omit<ThemeUiTheme, 'buttons, text, cards, badges, colors, forms'> {
+export interface Theme
+  extends Omit<
+    ThemeUiTheme,
+    'buttons, text, cards, badges, colors, forms, shadows'
+  > {
   buttons?: ButtonTheme;
   text?: TextTheme;
   cards?: CardTheme;
@@ -26,12 +28,14 @@ interface Theme
   listboxes?: Record<string, ThemeUIStyleObject>;
   menubuttons?: Record<string, ThemeUIStyleObject>;
   dialog?: Record<DialogTarget, ThemeUIStyleObject>;
+  shadows?: Record<'lightPrimary' | 'floater', string>;
 }
 
 const theme: Theme = {
   useBorderBox: true,
   useBodyStyles: true,
 
+  breakpoints: ['40em', '52em', '64em'],
   colors,
 
   fonts: {
@@ -41,14 +45,25 @@ const theme: Theme = {
     monospace: 'monospace'
   },
 
-  fontSizes: [10, 12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
+  fontSizes: [
+    ratioSizes[0],
+    ratioSizes[1],
+    ratioSizes[2],
+    ratioSizes[3],
+    ratioSizes[4],
+    ratioSizes[5],
+    ratioSizes[6],
+    ratioSizes[7],
+    ratioSizes[8],
+    ratioSizes[9],
+    ratioSizes[10]
+  ],
 
   fontWeights: {
     body: 400,
     heading: 700,
     bold: 700,
-    semiBold: 500,
-    caps: 600
+    semiBold: 500
   },
 
   lineHeights: {
@@ -71,18 +86,12 @@ const theme: Theme = {
   },
 
   shadows: {
-    faint: '0px 2px 7px #EAEFF440',
-    floater:
-      '0px 20px 40px rgba(219, 227, 237, 0.4), 0px 1px 3px rgba(190, 190, 190, 0.25)'
+    lightPrimary: `0 0 1px 5px ${transparentize('primary', 0.8)}`,
+    floater: '0 0 8px rgba(0, 0, 0, 0.125)'
   },
 
   sizes: {
     ...[0, 4, 8, 16, 32, 64, 128, 256, 512],
-    sidebar: 400,
-    title: 630,
-    column: 770,
-    page: 1200,
-    dashboard: 1380,
     container: 1140,
     ratioSizes
   },
@@ -94,18 +103,7 @@ const theme: Theme = {
   badges,
   forms,
   styles,
-  breakpoints: ['40em', '52em', '64em', '88em'],
   layout: {
-    modal: {
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      backgroundColor: 'background',
-      zIndex: 1000,
-      p: 3
-    },
     container: {
       px: 2
     }
@@ -114,22 +112,7 @@ const theme: Theme = {
     avatar: {}
   },
   messages: {}, // Defaults to "primary" & "highlight"
-  modal: {
-    height: {
-      mobile: '195px',
-      desktop: '78px'
-    }
-  },
   links: {
-    card: {
-      variant: 'cards.tight',
-      textDecoration: 'none',
-      color: 'inherit'
-    },
-    nostyle: {
-      textDecoration: 'none',
-      color: 'inherit'
-    },
     nav: {
       p: 2,
       fontSize: 3,
@@ -141,69 +124,14 @@ const theme: Theme = {
         color: 'primary',
         cursor: 'pointer'
       }
-    }
-  },
-  listboxes: {
-    // for @reach-ui/listbox
-    default: {
-      button: { variant: 'buttons.outline', width: '100%' },
-      popover: {
-        variant: 'cards.tight',
-        padding: 2,
-        cursor: 'pointer',
-        '&:focus-within': { outline: 'none' }
-      },
-      list: {
-        'li[aria-selected="true"]': {
-          backgroundColor: 'primary',
-          width: '100%'
-        }
-      }
-    }
-  },
-  menubuttons: {
-    // for @reach-ui/menubutton
-    default: {
-      list: {
-        variant: 'cards.tight'
-      },
-      item: {
-        fontSize: 3,
-        '&[data-selected]': { backgroundColor: 'primary' }
-      },
-      headerItem: {
-        fontSize: 3,
-        m: 1,
-        '&[data-selected]': {
-          backgroundColor: 'onSurfaceAlt',
-          borderRadius: 'round',
-          color: 'text'
-        }
-      }
-    }
-  },
-  dialog: {
-    mobile: {
-      width: '100vw',
-      maxHeight: '90vh',
-      overflow: 'scroll',
-      position: 'absolute',
-      bottom: 0,
-      mb: 0,
-      borderTopLeftRadius: 'roundish',
-      borderTopRightRadius: 'roundish',
-      border: (theme) => `1px solid ${theme.colors?.secondaryMuted}`,
-      px: 3,
-      py: 4,
-      background: (theme) => theme.colors?.surface
     },
 
-    desktop: {
-      border: (theme) => `1px solid ${theme.colors?.secondaryMuted}`,
-      borderRadius: '8px',
-      boxShadow: '0px 10px 50px hsla(0, 0%, 0%, 0.33)',
-      width: '50em',
-      background: (theme) => theme.colors?.surface
+    footer: {
+      fontSize: 4,
+      fontWeight: 'semiBold',
+      letterSpacing: '0.4px',
+      color: 'text',
+      cursor: 'pointer'
     }
   }
 };

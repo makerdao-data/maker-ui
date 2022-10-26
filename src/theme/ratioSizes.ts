@@ -1,50 +1,50 @@
-const ratio = 1.5;
+const ratio = 1.15;
 const sizesFromRatioConstructor = {
-  sm5: function () {
-    return this.sm4() / ratio;
+  sizeMinus5: function () {
+    return this.sizeMinus4() / ratio;
   },
-  sm4: function () {
-    return this.sm3() / ratio;
+  sizeMinus4: function () {
+    return this.sizeMinus3() / ratio;
   },
-  sm3: function () {
-    return this.sm2() / ratio;
+  sizeMinus3: function () {
+    return this.sizeMinus2() / ratio;
   },
-  sm2: function () {
-    return this.sm1() / ratio;
+  sizeMinus2: function () {
+    return this.sizeMinus1() / ratio;
   },
-  sm1: function () {
-    return this.s0 / ratio;
+  sizeMinus1: function () {
+    return this.size0 / ratio;
   },
-  s0: 1,
-  s1: function () {
-    return this.s0 * ratio;
+  size0: 1,
+  size1: function () {
+    return this.size0 * ratio;
   },
-  s2: function () {
-    return this.s1() * ratio;
+  size2: function () {
+    return this.size1() * ratio;
   },
-  s3: function () {
-    return this.s2() * ratio;
+  size3: function () {
+    return this.size2() * ratio;
   },
-  s4: function () {
-    return this.s3() * ratio;
+  size4: function () {
+    return this.size3() * ratio;
   },
-  s5: function () {
-    return this.s4() * ratio;
+  size5: function () {
+    return this.size4() * ratio;
   }
 };
 
 const ratioSizes = {
-  s0: `${sizesFromRatioConstructor.sm5()}rem`,
-  s1: `${sizesFromRatioConstructor.sm4()}rem`,
-  s2: `${sizesFromRatioConstructor.sm3()}rem`,
-  s3: `${sizesFromRatioConstructor.sm2()}rem`,
-  s4: `${sizesFromRatioConstructor.sm1()}rem`,
-  s5: `${sizesFromRatioConstructor.s0}rem`,
-  s6: `${sizesFromRatioConstructor.s1()}rem`,
-  s7: `${sizesFromRatioConstructor.s2()}rem`,
-  s8: `${sizesFromRatioConstructor.s3()}rem`,
-  s9: `${sizesFromRatioConstructor.s4()}rem`,
-  s10: `${sizesFromRatioConstructor.s5()}rem`
+  1: `${sizesFromRatioConstructor.sizeMinus5()}rem`,
+  2: `${sizesFromRatioConstructor.sizeMinus4()}rem`,
+  3: `${sizesFromRatioConstructor.sizeMinus3()}rem`,
+  4: `${sizesFromRatioConstructor.sizeMinus2()}rem`,
+  5: `${sizesFromRatioConstructor.sizeMinus1()}rem`,
+  6: `${sizesFromRatioConstructor.size0}rem`,
+  7: `${sizesFromRatioConstructor.size1()}rem`,
+  8: `${sizesFromRatioConstructor.size2()}rem`,
+  9: `${sizesFromRatioConstructor.size3()}rem`,
+  10: `${sizesFromRatioConstructor.size4()}rem`,
+  11: `${sizesFromRatioConstructor.size5()}rem`
 };
 
 export default ratioSizes;

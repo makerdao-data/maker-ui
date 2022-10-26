@@ -1,7 +1,9 @@
+import { transparentize } from '@theme-ui/color';
 import { ThemeUICSSObject } from 'theme-ui';
+import theme from '.';
 
 export type InputVariant = 'input' | 'inputError';
-export type LabelVariant = 'label' | 'thinLabel';
+export type LabelVariant = 'label';
 export type TextareaVariant = 'textarea' | 'textareaError';
 export type SelectVariant = 'select';
 export type SliderVariant = 'slider' | 'sliderActive';
@@ -21,37 +23,32 @@ export type FormTheme = Record<FormVariant, ThemeUICSSObject>;
 
 export const forms: FormTheme = {
   label: {
-    fontSize: 2,
-    fontWeight: 'bold',
-    py: 2
-  },
-  thinLabel: {
-    fontSize: 2,
+    fontSize: 3,
     fontWeight: 'semiBold',
     py: 2
   },
   input: {
     outline: 'none',
     borderRadius: 'small',
-    borderColor: 'secondary',
-    color: 'onSurface',
+    borderColor: 'muted',
+    color: 'text',
     p: 2,
     '&:focus': {
-      borderColor: 'secondaryEmphasis',
+      borderColor: 'mutedAlt',
       color: 'text'
     }
   },
   inputError: {
     variant: 'forms.input',
     borderColor: 'error',
-    color: 'onSurface',
+    color: 'text',
     '&:focus': {
       borderColor: 'error',
       color: 'text'
     }
   },
-  textarea: { variant: 'forms.input', fontFamily: 'body' },
-  textareaError: { variant: 'forms.inputError', fontFamily: 'body' },
+  textarea: { variant: 'forms.input' },
+  textareaError: { variant: 'forms.inputError' },
   select: { variant: 'forms.input' },
   slider: {
     height: '2px',
@@ -59,7 +56,10 @@ export const forms: FormTheme = {
     color: 'text',
     '&:active, &:hover, &:focus': {
       color: 'primary',
-      bg: 'primary'
+      bg: 'primary',
+      '&::-webkit-slider-thumb': {
+        boxShadow: `0 0 1px 5px ${transparentize('primary', 0.8)}`
+      }
     }
   },
   sliderActive: {
@@ -68,7 +68,7 @@ export const forms: FormTheme = {
     bg: 'primary'
   },
   radio: {
-    color: 'secondary',
+    color: 'muted',
     'input:checked ~ &': {
       color: 'primary'
     },
@@ -77,7 +77,7 @@ export const forms: FormTheme = {
     }
   },
   checkbox: {
-    color: 'secondary',
+    color: 'muted',
     'input:checked ~ &': {
       color: 'primary'
     },

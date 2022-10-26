@@ -42,15 +42,6 @@ export function Label() {
 
       <LabelComponent htmlFor="username">Username</LabelComponent>
       <InputComponent name="username" id="username" mb={3} />
-
-      <Text variant="heading" sx={{ width: '100%' }}>
-        Thin label
-      </Text>
-
-      <LabelComponent variant="thinLabel" htmlFor="username">
-        Username
-      </LabelComponent>
-      <InputComponent name="username" id="username" mb={3} />
     </Box>
   );
 }

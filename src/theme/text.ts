@@ -2,18 +2,23 @@ import { ThemeUIStyleObject } from 'theme-ui';
 
 export type TextVariant =
   | 'heading'
-  | 'smallCaps'
-  | 'secondary'
   | 'largeHeading'
   | 'mediumHeading'
   | 'smallHeading'
+  | 'small'
+  | 'smallError'
   | 'microHeading'
-  | 'largeText'
+  | 'muted'
+  | 'bigText'
+  | 'boldBody'
   | 'text'
-  | 'error'
   | 'smallText'
   | 'microText'
-  | 'caps';
+  | 'caps'
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'inputText';
 
 export type TextTheme = Record<TextVariant, ThemeUIStyleObject>;
 
@@ -21,20 +26,9 @@ export const text: TextTheme = {
   heading: {
     fontFamily: 'heading',
     lineHeight: 'heading',
-    fontSize: [5, 6],
-    fontWeight: 'semiBold',
+    fontWeight: 'heading',
+    fontSize: [6, 7],
     color: 'text'
-  },
-  smallCaps: {
-    fontSize: 1,
-    fontWeight: 'body',
-    color: 'textSecondary',
-    letterSpacing: '0.05em'
-  },
-  secondary: {
-    color: 'textSecondary',
-    fontSize: '15px',
-    fontWeight: 'body'
   },
   largeHeading: {
     variant: 'text.heading',
@@ -52,31 +46,67 @@ export const text: TextTheme = {
     variant: 'text.heading',
     fontSize: [4, 5]
   },
-  largeText: {
-    fontSize: [3, 4],
-    color: 'text'
-  },
   text: {
-    fontSize: [2, 3],
+    fontSize: 5,
     color: 'text'
-  },
-  error: {
-    fontSize: [1, 2],
-    color: 'error'
   },
   smallText: {
-    fontSize: [1, 2],
+    fontSize: 4,
     color: 'text'
   },
   microText: {
-    fontSize: [0, 1],
+    fontSize: 3,
     color: 'text'
   },
   caps: {
     textTransform: 'uppercase',
-    fontSize: 1,
-    fontWeight: 'caps',
-    color: 'textSecondary',
-    letterSpacing: '0.05em'
+    letterSpacing: '0.05em',
+    color: 'textMuted',
+    fontSize: 0,
+    fontWeight: 'bold'
+  },
+  h1: {
+    fontSize: 8,
+    letterSpacing: '0.3px',
+    fontWeight: 'semiBold'
+  },
+
+  h2: {
+    fontSize: 6,
+    lineHeight: 'loose',
+    fontWeight: 'semiBold',
+    letterSpacing: '0.4px'
+  },
+
+  h3: {
+    fontSize: 5,
+    lineHeight: 'loose',
+    fontWeight: 'semiBold',
+    letterSpacing: '0.4px'
+  },
+
+  bigText: {
+    fontSize: 7
+  },
+  boldBody: {
+    fontSize: 3,
+    fontWeight: 'semiBold',
+    letterSpacing: '0.3px'
+  },
+  small: {
+    fontSize: 1
+  },
+  inputText: {
+    fontSize: 3,
+    fontWeight: 'normal'
+  },
+  smallError: {
+    fontSize: 2,
+    color: 'error'
+  },
+  muted: {
+    color: 'textMuted',
+    fontSize: 4,
+    lineHeight: 'body'
   }
 };

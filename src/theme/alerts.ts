@@ -1,20 +1,12 @@
 import { ThemeUICSSObject } from 'theme-ui';
 
-export type AlertVariant =
-  | 'primary'
-  | 'success'
-  | 'notice'
-  | 'warning'
-  | 'banner'
-  | 'bannerNotice'
-  | 'bannerWarning';
+export type AlertVariant = 'primary' | 'success' | 'notice' | 'warning';
 
 export type AlertTheme = Record<AlertVariant, ThemeUICSSObject>;
 
 export const alerts: AlertTheme = {
   primary: {
-    fontSize: 2,
-    borderRadius: 'small',
+    borderRadius: 'xs',
     border: '1px solid',
     borderColor: 'primary',
     bg: 'primary',
@@ -37,24 +29,7 @@ export const alerts: AlertTheme = {
   warning: {
     variant: 'alerts.primary',
     borderColor: 'warning',
-    bg: 'warning',
-    color: 'onPrimary'
-  },
-  banner: {
-    variant: 'alerts.primary',
-    bg: 'banner',
-    borderColor: 'banner'
-  },
-  bannerNotice: {
-    variant: 'alerts.primary',
-    borderColor: 'orangeAttention',
-    bg: 'orangeAttention',
-    color: 'onPrimary'
-  },
-  bannerWarning: {
-    variant: 'alerts.primary',
-    borderColor: 'warning',
-    bg: 'warning',
-    color: 'onPrimary'
+    bg: 'warningAlt',
+    color: 'onWarning'
   }
 };

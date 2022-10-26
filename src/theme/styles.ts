@@ -1,5 +1,3 @@
-import { markdown } from './markdown';
-
 export const styles = {
   spinner: {
     color: 'primary',
@@ -11,10 +9,47 @@ export const styles = {
     strokeWidth: 3,
     size: 6
   },
+  time: {
+    display: 'inline',
+    major: {
+      fontSize: 4,
+      fontWeight: 'semiBold'
+    },
+    minor: {
+      fontSize: 1,
+      fontWeight: 'body',
+      color: 'textMuted'
+    }
+  },
   root: {
     fontFamily: 'body',
     lineHeight: 'body',
     fontWeight: 'body'
+  },
+  statusBox: {
+    layout: {
+      border: '1px solid',
+      borderRadius: 'medium',
+      fontSize: 2,
+      fontWeight: 'bold',
+      py: 3,
+      px: 4,
+      mt: 7,
+      lineHeight: 'body',
+      width: '100%'
+    },
+    warning: {
+      variant: 'styles.statusBox.layout',
+      bg: 'warningMuted',
+      borderColor: 'warning',
+      color: 'warningEmphasis'
+    },
+    success: {
+      variant: 'styles.statusBox.layout',
+      bg: 'primaryMuted',
+      borderColor: 'primaryEmphasis',
+      color: 'primaryAlt'
+    }
   },
   h1: {
     variant: 'text.largeHeading'
@@ -38,7 +73,7 @@ export const styles = {
     color: 'accentBlue',
     textDecoration: 'none'
   },
-  hr: { color: 'secondary' },
+  hr: {},
   code: {
     overflow: 'auto',
     p: 3,
@@ -55,7 +90,7 @@ export const styles = {
     // class names, functions and numbers
     '.property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .maybe-class-name, .regex, .important, .variable':
       {
-        color: 'textSecondary'
+        color: 'onBackground'
       },
 
     // keywords like const, return
@@ -76,7 +111,5 @@ export const styles = {
     bg: 'primaryMuted',
     color: 'primaryAlt',
     px: 1
-  },
-
-  markdown
+  }
 };

@@ -23,7 +23,7 @@ export const Provider: GlobalProvider = ({ children, globalState }) => {
               justifyContent: 'space-between',
               marginBottom: '4rem'
             }}>
-            <Box sx={{ display: 'flex', marginLeft: '-10px' }}>
+            <Box sx={{ display: 'flex' }}>
               <MakerColorIcon width={128} height={128} />
               <Text variant="microHeading" sx={{ alignSelf: 'end' }}>
                 UI

@@ -36,30 +36,3 @@ export function WarningAlert() {
     </Alert>
   );
 }
-
-export function BannerAlert() {
-  return (
-    <Alert variant="banner">
-      Beep boop, this is a banner!
-      <Close ml="auto" mr={-2} />
-    </Alert>
-  );
-}
-
-export function BannerNoticeAlert() {
-  return (
-    <Alert variant="bannerNotice">
-      Beep boop, this is a banner notice!
-      <Close ml="auto" mr={-2} />
-    </Alert>
-  );
-}
-
-export function BannerWarningAlert() {
-  return (
-    <Alert variant="bannerWarning">
-      Beep boop, this is a banner warning!
-      <Close ml="auto" mr={-2} />
-    </Alert>
-  );
-}

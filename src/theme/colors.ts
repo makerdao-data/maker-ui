@@ -1,10 +1,10 @@
 export type ColorVariant =
   | 'text'
-  | 'textSecondary'
+  | 'textMuted'
   | 'primary'
   | 'primaryEmphasis'
-  | 'primaryMuted'
   | 'primaryAlt'
+  | 'primaryMuted'
   | 'onPrimary'
   | 'secondary'
   | 'secondaryEmphasis'
@@ -12,11 +12,10 @@ export type ColorVariant =
   | 'secondaryMuted'
   | 'onSecondary'
   | 'background'
-  | 'accentBlueEmphasis'
-  | 'orangeAttention'
   | 'surface'
   | 'onSurface'
-  | 'onSurfaceAlt'
+  | 'muted'
+  | 'mutedAlt'
   | 'error'
   | 'success'
   | 'successAlt'
@@ -24,54 +23,15 @@ export type ColorVariant =
   | 'notice'
   | 'noticeAlt'
   | 'onNotice'
-  | 'warningAlt'
   | 'warning'
-  | 'accentBlue'
-  | 'accentPurple'
-  | 'skeletonColor'
-  | 'badgeSelector'
-  | 'skeletonHighlightColor'
-  | 'tagColorOne'
-  | 'tagColorOneBg'
-  | 'tagColorTwo'
-  | 'tagColorTwoBg'
-  | 'tagColorThree'
-  | 'tagColorThreeBg'
-  | 'tagColorFour'
-  | 'tagColorFourBg'
-  | 'tagColorFive'
-  | 'tagColorFiveBg'
-  | 'tagColorSix'
-  | 'tagColorSixBg'
-  | 'tagColorSeven'
-  | 'tagColorSevenBg'
-  | 'tagColorEight'
-  | 'tagColorEightBg'
-  | 'tagColorNine'
-  | 'tagColorNineBg'
-  | 'tagColorTen'
-  | 'tagColorTenBg'
-  | 'tagColorEleven'
-  | 'tagColorElevenBg'
-  | 'tagColorTwelve'
-  | 'tagColorTwelveBg'
-  | 'tagColorThirteen'
-  | 'tagColorThirteenBg'
-  | 'tagColorFourteen'
-  | 'tagColorFourteenBg'
-  | 'tagColorFifteen'
-  | 'tagColorFifteenBg'
-  | 'tagColorSixteen'
-  | 'tagColorSixteenBg'
-  | 'tagColorSeventeen'
-  | 'tagColorSeventeenBg'
-  | 'voterYellow'
-  | 'semiTransparentBackground'
+  | 'warningAlt'
+  | 'onWarning'
   | 'bull'
+  | 'bullAlt'
   | 'bear'
-  | 'banner'
-  | 'shadowFloater'
-  | 'darkPrimary';
+  | 'bearAlt'
+  | 'accentBlue'
+  | 'accentPurple';
 
 export type ColorMode = {
   dark: Partial<Record<ColorVariant, string>>;
@@ -81,89 +41,47 @@ export type ColorTheme = Record<ColorVariant, string> & { modes: ColorMode };
 
 export const colors: ColorTheme = {
   text: '#231536',
-  textSecondary: '#666666',
+  textMuted: '#7E7E88',
   primary: '#1AAB9B',
-  primaryEmphasis: '#008E7B',
-  primaryMuted: '#A3DDD7',
+  primaryEmphasis: '#139D8D',
   primaryAlt: '#098C7D',
+  primaryMuted: '#B6EDE7',
   onPrimary: '#FFF',
-  secondary: '#D5D9E0',
-  secondaryEmphasis: '#7E7E87',
+  secondary: '#D4D9E1',
+  secondaryEmphasis: '#7E7E88',
   secondaryAlt: '#231536',
   secondaryMuted: '#D4D9E1',
   onSecondary: '#7E7E88',
-  background: '#FFF',
-  accentBlueEmphasis: '#1147C8',
-  orangeAttention: '#F9A606',
+  background: '#F6F8F9',
   surface: '#FFF',
   onSurface: '#708390',
-  onSurfaceAlt: '#F7F8F9',
-  error: '#FF0000',
-  success: '#087C6D',
-  successAlt: '#EEFFFD',
-  onSuccess: '#087C6D',
-  notice: '#EB7720',
-  noticeAlt: '#FFFBEF',
-  onNotice: '#EB7720',
-  warningAlt: '#CB532D',
-  warning: '#F75524',
+  muted: '#D4D9E1',
+  mutedAlt: '#7E7E88',
+  error: '#BC2F48',
+  success: '#2DC1B1',
+  successAlt: '#E7FCFA',
+  onSuccess: '#2DC1B1',
+  notice: '#FCDC93',
+  noticeAlt: '#FFF9ED',
+  onNotice: '#FCDC93',
+  warning: '#F77249',
+  warningAlt: '#FDEDE8',
+  onWarning: '#F77249',
+  bull: '#79D8A5',
+  bullAlt: '#E8F5F0',
+  bear: '#EB3B5A',
+  bearAlt: '#F8E7EC',
   accentBlue: '#447AFB',
   accentPurple: '#9055AF',
-  skeletonColor: '#EEE',
-  badgeSelector: '#EEE',
-  skeletonHighlightColor: '#F5F5F5',
-  tagColorOne: '#D44C96',
-  tagColorOneBg: '#FFF4FA',
-  tagColorTwo: '#8F2EC1',
-  tagColorTwoBg: '#FBF2FF',
-  tagColorThree: '#02CB9B',
-  tagColorThreeBg: '#EBFFFA',
-  tagColorFour: '#FF4085',
-  tagColorFourBg: '#FFF0F4',
-  tagColorFive: '#EF5277',
-  tagColorFiveBg: '#FEEEF2',
-  tagColorSix: '#5D48FF',
-  tagColorSixBg: '#F7F5FF',
-  tagColorSeven: '#7D8FAA',
-  tagColorSevenBg: '#F2F5FA',
-  tagColorEight: '#00B5D3',
-  tagColorEightBg: '#EEFAFC',
-  tagColorNine: '#34AAFF',
-  tagColorNineBg: '#F1F9FF',
-  tagColorTen: '#FF8237',
-  tagColorTenBg: '#FFF5EF',
-  tagColorEleven: '#1AAB9B',
-  tagColorElevenBg: '#EEFFFD',
-  tagColorTwelve: '#635696',
-  tagColorTwelveBg: '#F7F4FF',
-  tagColorThirteen: '#E7C200',
-  tagColorThirteenBg: '#FFFBEF',
-  tagColorFourteen: '#FF36C7',
-  tagColorFourteenBg: '#FFF3F8',
-  tagColorFifteen: '#FF8237',
-  tagColorFifteenBg: '#FFFBEF',
-  tagColorSixteen: '#FF8237',
-  tagColorSixteenBg: '#FFFBEF',
-  tagColorSeventeen: '#AD927D',
-  tagColorSeventeenBg: '#FFF9F4',
-  voterYellow: '#FDC134',
-  semiTransparentBackground: 'rgba(255, 255, 255, 0.5)',
-  bull: '#1AAB9B',
-  bear: '#F75524',
-  banner: '#231635',
-  shadowFloater: '#dbe3ed66',
-  darkPrimary: '#027265',
   modes: {
     dark: {
       primary: '#1DC1AE',
       onPrimary: '#000',
       background: '#141414',
       text: '#D7C9EA',
-      textSecondary: '#7E7E88',
       secondaryMuted: '#D7C9EA',
       surface: '#000',
       onSurface: '#7E7E88',
-      onSurfaceAlt: '#141414',
       primaryMuted: '#13554D',
       secondaryAlt: '#D7C9EA',
       accentBlue: '#5D8DFC',
@@ -172,49 +90,8 @@ export const colors: ColorTheme = {
       warningAlt: '#F75524',
       successAlt: '#002C26',
       onSuccess: '#1DC1AE',
-      skeletonColor: '#000',
-      badgeSelector: '#000',
-      skeletonHighlightColor: '#141414',
-      tagColorOne: '#D44C96',
-      tagColorOneBg: '#121212',
-      tagColorTwo: '#8F2EC1',
-      tagColorTwoBg: '#121212',
-      tagColorThree: '#02CB9B',
-      tagColorThreeBg: '#121212',
-      tagColorFour: '#FF4085',
-      tagColorFourBg: '#121212',
-      tagColorFive: '#EF5277',
-      tagColorFiveBg: '#121212',
-      tagColorSix: '#5D48FF',
-      tagColorSixBg: '#121212',
-      tagColorSeven: '#7D8FAA',
-      tagColorSevenBg: '#121212',
-      tagColorEight: '#00B5D3',
-      tagColorEightBg: '#121212',
-      tagColorNine: '#34AAFF',
-      tagColorNineBg: '#121212',
-      tagColorTen: '#FF8237',
-      tagColorTenBg: '#121212',
-      tagColorEleven: '#1AAB9B',
-      tagColorElevenBg: '#121212',
-      tagColorTwelve: '#635696',
-      tagColorTwelveBg: '#121212',
-      tagColorThirteen: '#E7C200',
-      tagColorThirteenBg: '#121212',
-      tagColorFourteen: '#FF36C7',
-      tagColorFourteenBg: '#121212',
-      tagColorFifteen: '#FF8237',
-      tagColorFifteenBg: '#121212',
-      tagColorSixteen: '#FF8237',
-      tagColorSixteenBg: '#121212',
-      tagColorSeventeen: '#AD927D',
-      tagColorSeventeenBg: '#121212',
-      semiTransparentBackground: 'rgba(0, 0, 0, 0.5)',
       bull: '#1AAB9B',
-      bear: '#F75524',
-      banner: '#231635',
-      shadowFloater: '#dbe3ed1a',
-      darkPrimary: '#098C7D'
+      bear: '#F75524'
     }
   }
 };

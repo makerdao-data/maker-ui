@@ -19,10 +19,6 @@ export function Typography() {
       <Text variant="microHeading" sx={{ width: '100%' }}>
         Micro Heading
       </Text>
-
-      <Text variant="largeText" sx={{ width: '100%', marginTop: '2rem' }}>
-        Large Text
-      </Text>
       <Text variant="text" sx={{ width: '100%' }}>
         Normal Text
       </Text>
@@ -35,16 +31,6 @@ export function Typography() {
 
       <Text variant="caps" sx={{ width: '100%', marginTop: '2rem' }}>
         Caps Text
-      </Text>
-      <Text variant="smallCaps" sx={{ width: '100%' }}>
-        Small Caps Text
-      </Text>
-
-      <Text variant="error" sx={{ width: '100%', marginTop: '2rem' }}>
-        Error Text
-      </Text>
-      <Text variant="secondary" sx={{ width: '100%' }}>
-        Secondary Text
       </Text>
     </Box>
   );

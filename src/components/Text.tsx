@@ -1,7 +1,7 @@
 import { Text as ThemeUIText, TextProps as ThemeUITextProps } from 'theme-ui';
 import { TextVariant } from '../theme/text';
 
-type TextProps = ThemeUITextProps & {
+export type TextProps = ThemeUITextProps & {
   variant?: TextVariant;
 };
 
