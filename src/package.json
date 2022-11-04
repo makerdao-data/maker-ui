@@ -1,6 +1,6 @@
 {
   "name": "@makerdao-dicu/makerdao-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Maker DAO UI React",
   "main": "package/esm/bundle.js",
   "module": "package/esm/bundle.js",
@@ -8,12 +8,8 @@
   "author": "Emmett Brown",
   "license": "MIT",
   "private": false,
-  "scripts": {
-    "build": "yarn rollup -c rollup.config.js"
-  },
   "files": [
-    "components",
-    "index.ts"
+    "../package"
   ],
   "dependencies": {
     "@emotion/react": "^11.10.4",
