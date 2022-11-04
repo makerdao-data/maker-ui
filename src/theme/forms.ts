@@ -1,6 +1,5 @@
 import { transparentize } from '@theme-ui/color';
 import { ThemeUICSSObject } from 'theme-ui';
-import theme from '.';
 
 export type InputVariant = 'input' | 'inputError';
 export type LabelVariant = 'label';

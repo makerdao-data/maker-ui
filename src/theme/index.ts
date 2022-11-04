@@ -46,7 +46,6 @@ const theme: Theme = {
   },
 
   fontSizes: [
-    ratioSizes[0],
     ratioSizes[1],
     ratioSizes[2],
     ratioSizes[3],
@@ -56,7 +55,8 @@ const theme: Theme = {
     ratioSizes[7],
     ratioSizes[8],
     ratioSizes[9],
-    ratioSizes[10]
+    ratioSizes[10],
+    ratioSizes[11]
   ],
 
   fontWeights: {

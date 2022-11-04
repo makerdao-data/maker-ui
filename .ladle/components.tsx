@@ -10,7 +10,7 @@ import { ThemeProvider, useColorMode, Box, Link } from 'theme-ui';
 import { GithubIcon, MakerColorIcon, Text } from '../src/components';
 import theme from '../src/theme';
 
-export const Provider: GlobalProvider = ({ children, globalState }) => {
+export const Provider: GlobalProvider = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <ColorModeForwarder>

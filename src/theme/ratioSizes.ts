@@ -1,4 +1,4 @@
-const ratio = 1.15;
+const ratio = 1.25;
 const sizesFromRatioConstructor = {
   sizeMinus5: function () {
     return this.sizeMinus4() / ratio;

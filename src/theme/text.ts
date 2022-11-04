@@ -6,7 +6,7 @@ export type TextVariant =
   | 'mediumHeading'
   | 'smallHeading'
   | 'small'
-  | 'smallError'
+  | 'error'
   | 'microHeading'
   | 'muted'
   | 'bigText'
@@ -27,16 +27,16 @@ export const text: TextTheme = {
     fontFamily: 'heading',
     lineHeight: 'heading',
     fontWeight: 'heading',
-    fontSize: [6, 7],
+    fontSize: [8, 9],
     color: 'text'
   },
   largeHeading: {
     variant: 'text.heading',
-    fontSize: [7, 8]
+    fontSize: [9, 10]
   },
   mediumHeading: {
     variant: 'text.heading',
-    fontSize: [6, 7]
+    fontSize: [8, 9]
   },
   smallHeading: {
     variant: 'text.heading',
@@ -62,7 +62,7 @@ export const text: TextTheme = {
     textTransform: 'uppercase',
     letterSpacing: '0.05em',
     color: 'textMuted',
-    fontSize: 0,
+    fontSize: 5,
     fontWeight: 'bold'
   },
   h1: {
@@ -89,7 +89,7 @@ export const text: TextTheme = {
     fontSize: 7
   },
   boldBody: {
-    fontSize: 3,
+    fontSize: 5,
     fontWeight: 'semiBold',
     letterSpacing: '0.3px'
   },
@@ -100,8 +100,8 @@ export const text: TextTheme = {
     fontSize: 3,
     fontWeight: 'normal'
   },
-  smallError: {
-    fontSize: 2,
+  error: {
+    fontSize: 5,
     color: 'error'
   },
   muted: {

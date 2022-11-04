@@ -12,6 +12,6 @@ export default function Badge({ children, variant, ...props }: BadgeProps) {
   return (
     <ThemeUIBadge variant={variant} {...props}>
       {children}
-    </ThemeUIBadge>
+    </ThemeUIBadge> hj
   );
 }

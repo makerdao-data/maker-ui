@@ -1,11 +1,14 @@
 {
-  "name": "maker-ui",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@makerdao-dicu/makerdao-ui-stories",
+  "version": "0.0.1",
+  "main": "src/package/esm/bundle.js",
+  "module": "src/package/esm/bundle.js",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "ladle build",
+    "build-package": "yarn rollup -c rollup.config.js",
+    "publish-package": "cd src && yarn publish --dry-run",
     "serve": "ladle serve",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
@@ -22,10 +25,11 @@
     "theme-ui": "^0.15.1"
   },
   "description": "Maker DAO UI React components",
-  "repository": "https://github.com/ofqwx/maker-ui",
-  "author": "Emmet Brown",
+  "repository": "https://github.com/makerdao-data/maker-ui",
+  "author": "Emmett Brown",
   "private": false,
   "devDependencies": {
+    "@rollup/plugin-typescript": "^9.0.2",
     "@types/node": "^18.8.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
@@ -36,6 +40,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "rollup": "^3.2.5",
+    "tslib": "^2.4.1",
+    "typescript": "^4.8.4"
   }
 }
