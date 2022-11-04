@@ -1,6 +1,6 @@
 {
   "name": "@makerdao-dicu/makerdao-ui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Maker DAO UI React",
   "main": "package/esm/bundle.js",
   "module": "package/esm/bundle.js",
@@ -9,7 +9,7 @@
   "license": "MIT",
   "private": false,
   "files": [
-    "../package"
+    "/package"
   ],
   "dependencies": {
     "@emotion/react": "^11.10.4",
