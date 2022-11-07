@@ -92,6 +92,8 @@ export { YourCommentIcon } from './web';
 export { GnosisSafeIcon } from './web';
 export { WalletCheckIcon } from './web';
 export { PaperCheckIcon } from './web';
+export { MoonIcon } from './web';
+export { SunIcon } from './web';
 export { LedgerIcon } from './brand';
 export { MetamaskColorIcon } from './brand';
 export { MetamaskIcon } from './brand';

@@ -86,3 +86,5 @@ export { default as YourCommentIcon } from './YourCommentIcon';
 export { default as GnosisSafeIcon } from './GnosisSafeIcon';
 export { default as WalletCheckIcon } from './WalletCheckIcon';
 export { default as PaperCheckIcon } from './PaperCheckIcon';
+export { default as MoonIcon } from './MoonIcon';
+export { default as SunIcon } from './SunIcon';
