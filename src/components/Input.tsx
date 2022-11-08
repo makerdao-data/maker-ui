@@ -1,4 +1,7 @@
-import { Input as ThemeUIInput, InputProps as ThemeUIInputProps } from 'theme-ui';
+import {
+  Input as ThemeUIInput,
+  InputProps as ThemeUIInputProps
+} from 'theme-ui';
 import { InputVariant } from '../theme/forms';
 
 type InputProps = ThemeUIInputProps & {

@@ -17,7 +17,8 @@ export default function RocketChatIcon({
       width={width + 'px'}
       height={height + 'px'}
       fill={color}
-      {...props}>
+      {...props}
+    >
       <path
         fill="currentColor"
         d="M496.293,255.338c0-24.103-7.21-47.215-21.437-68.699c-12.771-19.288-30.666-36.362-53.184-50.745

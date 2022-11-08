@@ -6,6 +6,13 @@ export declare type SelectVariant = 'select';
 export declare type SliderVariant = 'slider' | 'sliderActive';
 export declare type RadioVariant = 'radio';
 export declare type CheckboxVariant = 'checkbox';
-export declare type FormVariant = InputVariant | LabelVariant | TextareaVariant | SelectVariant | SliderVariant | RadioVariant | CheckboxVariant;
+export declare type FormVariant =
+  | InputVariant
+  | LabelVariant
+  | TextareaVariant
+  | SelectVariant
+  | SliderVariant
+  | RadioVariant
+  | CheckboxVariant;
 export declare type FormTheme = Record<FormVariant, ThemeUICSSObject>;
 export declare const forms: FormTheme;

@@ -22,7 +22,8 @@ export const Provider: GlobalProvider = ({ children }) => {
               overflow: 'hidden',
               justifyContent: 'space-between',
               marginBottom: '4rem'
-            }}>
+            }}
+          >
             <Box sx={{ display: 'flex' }}>
               <MakerColorIcon width={128} height={128} />
               <Text variant="microHeading" sx={{ alignSelf: 'end' }}>
@@ -38,7 +39,8 @@ export const Provider: GlobalProvider = ({ children }) => {
                 color: 'inherit',
                 textDecoration: 'inherit',
                 cursor: 'pointer'
-              }}>
+              }}
+            >
               <GithubIcon width={32} height={32} />
             </Link>
           </Box>

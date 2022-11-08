@@ -15,7 +15,8 @@ export function LightModeColors() {
           width: '100%',
           padding: 0,
           gap: '1rem'
-        }}>
+        }}
+      >
         {Object.keys(colors)
           .filter((key) => key !== 'modes')
           .map((colorVariant) => (
@@ -27,7 +28,8 @@ export function LightModeColors() {
                 boxShadow: '0 0 3px 0 gray',
                 justifyContent: 'space-between',
                 padding: '1rem'
-              }}>
+              }}
+            >
               <Box
                 sx={{
                   backgroundColor: colors[colorVariant as ColorVariant],
@@ -66,7 +68,8 @@ export function DarkModeColors() {
           width: '100%',
           padding: 0,
           gap: '1rem'
-        }}>
+        }}
+      >
         {Object.keys(colors.modes.dark).map((colorVariant) => {
           return (
             <Box
@@ -77,7 +80,8 @@ export function DarkModeColors() {
                 boxShadow: '0 0 3px 0 gray',
                 justifyContent: 'space-between',
                 padding: '1rem'
-              }}>
+              }}
+            >
               <Box
                 sx={{
                   backgroundColor:

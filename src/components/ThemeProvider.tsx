@@ -31,6 +31,7 @@ function ColorModeHandler({ children }: { children: JSX.Element }) {
     darkModeQuery.addEventListener('change', (event) => {
       setThemeUIColorMode(event.matches ? 'dark' : 'light');
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return children;

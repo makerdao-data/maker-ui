@@ -21,7 +21,8 @@ export default function Modal({ children, isOpen, ...props }: ModalProps) {
         overflow: 'auto',
         backgroundColor: 'rgba(0,0,0,0.4)'
       }}
-      {...props}>
+      {...props}
+    >
       <Box
         sx={{
           backgroundColor: '#fefefe',
@@ -31,7 +32,8 @@ export default function Modal({ children, isOpen, ...props }: ModalProps) {
           width: '80%',
           display: 'flex',
           flexDirection: 'column'
-        }}>
+        }}
+      >
         <Text
           sx={{
             color: '#aaa',
@@ -43,7 +45,8 @@ export default function Modal({ children, isOpen, ...props }: ModalProps) {
               textDecoration: 'none',
               cursor: 'pointer'
             }
-          }}>
+          }}
+        >
           &times;
         </Text>
         {children}
