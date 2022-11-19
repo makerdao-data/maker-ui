@@ -11,7 +11,8 @@
     "outDir": "package",
     "sourceMap": true,
     "strict": true,
-    "target": "es2018"
+    "target": "es2018",
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules"]
 }

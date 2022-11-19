@@ -32,6 +32,11 @@ export interface Theme
 }
 
 const theme: Theme = {
+  config: {
+    initialColorModeName: 'light',
+    useColorSchemeMediaQuery: 'system',
+    useLocalStorage: false
+  },
   useBorderBox: true,
   useBodyStyles: true,
 
