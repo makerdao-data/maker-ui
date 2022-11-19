@@ -11,8 +11,7 @@ export function Typography() {
           flexWrap: 'wrap',
           gap: '1rem',
           marginBottom: '3rem'
-        }}
-      >
+        }}>
         <Text variant="smallHeading" sx={{ width: '100%' }}>
           body
         </Text>
