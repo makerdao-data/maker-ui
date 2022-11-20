@@ -17,8 +17,7 @@ export default function GovIntroIcon({
       width={width + 'px'}
       height={height + 'px'}
       fill={color}
-      {...props}
-    >
+      {...props}>
       <g>
         <path
           opacity="0.7"
@@ -45,8 +44,7 @@ export default function GovIntroIcon({
             y1="18.9673"
             x2="19.0828"
             y2="34.7904"
-            gradientUnits="userSpaceOnUse"
-          >
+            gradientUnits="userSpaceOnUse">
             <stop stopColor="#F9D799" />
             <stop offset="1" stopColor="#FFA048" />
           </linearGradient>
@@ -56,8 +54,7 @@ export default function GovIntroIcon({
             y1="4.801"
             x2="25.8969"
             y2="23.8438"
-            gradientUnits="userSpaceOnUse"
-          >
+            gradientUnits="userSpaceOnUse">
             <stop stopColor="#F9D799" />
             <stop offset="1" stopColor="#FFA048" />
           </linearGradient>
@@ -67,8 +64,7 @@ export default function GovIntroIcon({
             y1="21.3542"
             x2="45.9703"
             y2="21.8919"
-            gradientUnits="userSpaceOnUse"
-          >
+            gradientUnits="userSpaceOnUse">
             <stop stopColor="#FFB733" />
             <stop offset="1" stopColor="#FFA048" />
           </linearGradient>
@@ -78,8 +74,7 @@ export default function GovIntroIcon({
             y1="34.5433"
             x2="44.4204"
             y2="35.727"
-            gradientUnits="userSpaceOnUse"
-          >
+            gradientUnits="userSpaceOnUse">
             <stop stopColor="#F9D799" />
             <stop offset="1" stopColor="#FFA048" />
           </linearGradient>
