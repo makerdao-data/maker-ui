@@ -1,6 +1,6 @@
 {
   "name": "@makerdao-dicu/makerdao-ui",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Maker DAO UI React",
   "main": "package/esm/bundle.js",
   "module": "package/esm/bundle.js",
