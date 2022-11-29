@@ -6,9 +6,9 @@ import {
   ChartOptions
 } from 'lightweight-charts';
 import { useEffect, useRef } from 'react';
-import { Box } from 'theme-ui';
+import { Box, BoxProps } from 'theme-ui';
 
-type DataSerie = {
+export type DataSerie = {
   data: SingleValueData[] | WhitespaceData[];
   colors: {
     backgroundColor: string;
@@ -22,11 +22,12 @@ type DataSerie = {
 type AreaChartProps = {
   dataSeries: DataSerie[];
   chartOptions: DeepPartial<ChartOptions>;
-};
+} & BoxProps;
 
 export default function AreaChart({
   dataSeries,
-  chartOptions
+  chartOptions,
+  ...props
 }: AreaChartProps) {
   const chartContainerRef = useRef<HTMLDivElement>();
 
@@ -59,5 +60,7 @@ export default function AreaChart({
     };
   }, [chartOptions, chartOptions.height, dataSeries]);
 
-  return <Box as="div" ref={chartContainerRef} />;
+  return (
+    <Box role="graphics-doc" as="div" ref={chartContainerRef} {...props} />
+  );
 }

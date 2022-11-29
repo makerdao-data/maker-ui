@@ -79,3 +79,4 @@ export { default as TelegramIcon } from './TelegramIcon';
 export { default as TwitterIcon } from './TwitterIcon';
 export { default as MakerduxIcon } from './MakerduxIcon';
 export { default as MkrLockedIcon } from './MkrLockedIcon';
+export { default as ArbitrumIcon } from './ArbitrumIcon';
