@@ -70,8 +70,13 @@ export const styles = {
     fontWeight: 500
   },
   a: {
-    color: 'accentBlue',
-    textDecoration: 'none'
+    color: 'primary',
+    textDecoration: 'none',
+
+    [':hover']: {
+      textDecoration: 'underline',
+      color: 'primaryAlt'
+    }
   },
   hr: {},
   code: {

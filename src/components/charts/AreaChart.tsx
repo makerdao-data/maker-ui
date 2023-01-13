@@ -3,20 +3,16 @@ import {
   DeepPartial,
   SingleValueData,
   WhitespaceData,
-  ChartOptions
+  ChartOptions,
+  SeriesOptionsCommon,
+  AreaStyleOptions
 } from 'lightweight-charts';
 import { useEffect, useRef } from 'react';
 import { Box, BoxProps } from 'theme-ui';
 
 export type DataSerie = {
   data: SingleValueData[] | WhitespaceData[];
-  colors: {
-    backgroundColor: string;
-    lineColor: string;
-    textColor: string;
-    areaTopColor: string;
-    areaBottomColor: string;
-  };
+  styleOptions: DeepPartial<SeriesOptionsCommon & AreaStyleOptions>;
 };
 
 type AreaChartProps = {
@@ -43,9 +39,7 @@ export default function AreaChart({
 
     for (const dataSerie of dataSeries) {
       const newSeries = chart.addAreaSeries({
-        lineColor: dataSerie.colors.lineColor,
-        topColor: dataSerie.colors.areaTopColor,
-        bottomColor: dataSerie.colors.areaBottomColor
+        ...dataSerie.styleOptions
       });
 
       newSeries.setData(dataSerie.data);

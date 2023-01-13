@@ -85,12 +85,10 @@ export function AreaChart() {
 
 const dataSeries = [
   {
-    colors: {
-      backgroundColor: 'white',
+    styleOptions: {
       lineColor: '#2962FF',
-      textColor: 'text',
-      areaTopColor: '#2962FF',
-      areaBottomColor: 'rgba(41, 98, 255, 0.28)'
+      topColor: '#2962FF',
+      bottomColor: 'rgba(41, 98, 255, 0.28)'
     },
     data: Object.keys(summaryData.total_supply.OPTIMISM)
       .filter((key) =>
@@ -108,12 +106,10 @@ const dataSeries = [
       }))
   },
   {
-    colors: {
-      backgroundColor: 'white',
+    styleOptions: {
       lineColor: '#ff818f',
-      textColor: 'text',
-      areaTopColor: '#ff818f',
-      areaBottomColor: 'rgba(255, 125, 130, 0.28)'
+      topColor: '#ff818f',
+      bottomColor: 'rgba(255, 125, 130, 0.28)'
     },
     data: Object.keys(summaryData.total_supply.ARBITRUM)
       .filter((key) =>
@@ -132,12 +128,10 @@ const dataSeries = [
       }))
   },
   {
-    colors: {
-      backgroundColor: 'white',
+    styleOptions: {
       lineColor: '#9191b0',
-      textColor: 'text',
-      areaTopColor: '#9191b0',
-      areaBottomColor: 'rgba(126, 125, 161, 0.28)'
+      topColor: '#9191b0',
+      bottomColor: 'rgba(126, 125, 161, 0.28)'
     },
     data: Object.keys(summaryData.total_supply.STARKNET)
       .filter((key) =>
