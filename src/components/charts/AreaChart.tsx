@@ -9,6 +9,7 @@ import {
 } from 'lightweight-charts';
 import { useEffect, useRef } from 'react';
 import { Box, BoxProps } from 'theme-ui';
+import { useTheme } from '../../hooks';
 
 export type DataSerie = {
   data: SingleValueData[] | WhitespaceData[];
@@ -18,14 +19,17 @@ export type DataSerie = {
 type AreaChartProps = {
   dataSeries: DataSerie[];
   chartOptions: DeepPartial<ChartOptions>;
+  title?: string;
 } & BoxProps;
 
 export default function AreaChart({
   dataSeries,
   chartOptions,
+  title,
   ...props
 }: AreaChartProps) {
   const chartContainerRef = useRef<HTMLDivElement>();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,6 +49,31 @@ export default function AreaChart({
       newSeries.setData(dataSerie.data);
     }
 
+    if (title) {
+      const prevTooltip = document.getElementById('tooltip-id');
+      const node = document.getElementById('chart-id');
+
+      if (prevTooltip && node) {
+        node.removeChild(prevTooltip);
+      }
+
+      const toolTip = document.createElement('div');
+      toolTip.setAttribute('id', 'tooltip-id');
+
+      chartContainerRef.current?.appendChild(toolTip);
+
+      toolTip.style.position = 'absolute';
+      toolTip.style.display = 'block';
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore:next-line
+      toolTip.style.fontWeight = theme?.fontWeights?.heading || '700';
+      toolTip.style.top = '0';
+      toolTip.style.left = '0';
+      toolTip.style.backgroundColor = 'transparent';
+      toolTip.style.zIndex = '1';
+      toolTip.innerHTML = `<div style="font-size: ${theme.fontSizes?.[6]}; color: ${theme.colors?.text};">${title}</div>`;
+    }
+
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -52,9 +81,15 @@ export default function AreaChart({
 
       chart.remove();
     };
-  }, [chartOptions, chartOptions.height, dataSeries]);
+  }, [chartOptions, chartOptions.height, dataSeries, theme, title]);
 
   return (
-    <Box role="graphics-doc" as="div" ref={chartContainerRef} {...props} />
+    <Box
+      role="graphics-doc"
+      as="div"
+      ref={chartContainerRef}
+      sx={{ position: 'relative' }}
+      {...props}
+    />
   );
 }
