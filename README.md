@@ -1,1 +1,15 @@
-# React Components and theme built on theme-ui based on [DAI UI](https://dai-ui.vercel.app/) design.
+# MakerDAO React Components and theme built on theme-ui.
+
+## Installation
+
+```
+npm install @makerdao-dicu/makerdao-ui --save
+```
+
+or with yarn
+
+```
+yarn add @makerdao-dicu/makerdao-ui
+```
+
+**React stories:** https://ui.makerdao.fyi
