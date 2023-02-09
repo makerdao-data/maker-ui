@@ -54,7 +54,7 @@ export const colors: ColorTheme = {
   secondaryMuted: '#D4D9E1',
   onSecondary: '#7E7E88',
   background: '#F6F8F9',
-  surface: '#FFFFF',
+  surface: '#FFFFFF',
   onSurface: '#708390',
   muted: '#D4D9E1',
   mutedAlt: '#7E7E88',
