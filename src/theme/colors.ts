@@ -31,7 +31,8 @@ export type ColorVariant =
   | 'bear'
   | 'bearAlt'
   | 'accentBlue'
-  | 'accentPurple';
+  | 'accentPurple'
+  | 'tableStructure';
 
 export type ColorMode = {
   dark: Partial<Record<ColorVariant, string>>;
@@ -53,7 +54,7 @@ export const colors: ColorTheme = {
   secondaryMuted: '#D4D9E1',
   onSecondary: '#7E7E88',
   background: '#F6F8F9',
-  surface: '#FFF',
+  surface: '#FFFFF',
   onSurface: '#708390',
   muted: '#D4D9E1',
   mutedAlt: '#7E7E88',
@@ -73,14 +74,15 @@ export const colors: ColorTheme = {
   bearAlt: '#F8E7EC',
   accentBlue: '#447AFB',
   accentPurple: '#9055AF',
+  tableStructure: '#708390',
   modes: {
     dark: {
       primary: '#1DC1AE',
       onPrimary: '#000',
-      background: '#141414',
-      text: '#FFF',
+      background: '#0F0F0F',
+      text: '#F1F1F1',
       secondaryMuted: '#FFF',
-      surface: '#000',
+      surface: '#212121',
       onSurface: '#7E7E88',
       primaryMuted: '#13554D',
       secondaryAlt: '#FFF',
@@ -91,7 +93,8 @@ export const colors: ColorTheme = {
       successAlt: '#002C26',
       onSuccess: '#1DC1AE',
       bull: '#1AAB9B',
-      bear: '#F75524'
+      bear: '#F75524',
+      tableStructure: '#708390'
     }
   }
 };
