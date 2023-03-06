@@ -1,8 +1,9 @@
 {
   "name": "@makerdao-dicu/makerdao-ui",
-  "version": "0.0.32",
+  "version": "0.1.0",
   "description": "Maker DAO UI React",
-  "main": "package/esm/bundle.js",
+  "main": "package/cjs/bundle.js",
+  "browser": "package/umd/bundle.js",
   "module": "package/esm/bundle.js",
   "repository": "https://github.com/makerdao-data/maker-ui",
   "author": "Emmett Brown",
