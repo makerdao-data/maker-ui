@@ -1,7 +1,8 @@
 {
   "name": "@makerdao-dicu/makerdao-ui-stories",
   "version": "0.0.1",
-  "main": "src/package/esm/bundle.js",
+  "main": "src/package/cjs/bundle.js",
+  "browser": "src/package/umd/bundle.js",
   "module": "src/package/esm/bundle.js",
   "license": "MIT",
   "type": "module",

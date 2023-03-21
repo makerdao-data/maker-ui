@@ -10,26 +10,26 @@ export const alerts: AlertTheme = {
     border: '1px solid',
     borderColor: 'primary',
     bg: 'primary',
-    color: 'onPrimary',
+    color: 'text',
     width: '100%',
     justifyContent: ['flex-start', 'center']
   },
   success: {
     variant: 'alerts.primary',
     borderColor: 'success',
-    bg: 'successAlt',
-    color: 'onSuccess'
+    bg: 'success',
+    color: 'text'
   },
   notice: {
     variant: 'alerts.primary',
     borderColor: 'notice',
-    bg: 'noticeAlt',
-    color: 'onNotice'
+    bg: 'notice',
+    color: 'text'
   },
   warning: {
     variant: 'alerts.primary',
     borderColor: 'warning',
-    bg: 'warningAlt',
-    color: 'onWarning'
+    bg: 'warning',
+    color: 'text'
   }
 };

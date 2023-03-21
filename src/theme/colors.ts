@@ -1,30 +1,34 @@
 export type ColorVariant =
-  | 'primary-200'
-  | 'primary-400'
-  | 'primary-500'
-  | 'primary-600'
-  | 'primary-900'
-  | 'secondary-100'
-  | 'secondary-200'
-  | 'secondary-400'
-  | 'secondary-500'
+  | 'primary'
+  | 'onPrimary'
+  | 'primary-active'
+  | 'primary-disabled'
+  | 'primary-strong'
+  | 'primary-alt'
+  | 'text'
+  | 'muted'
+  | 'secondary'
+  | 'onSecondary'
+  | 'error'
+  | 'onError'
   | 'error-200'
-  | 'error-500'
+  | 'success'
+  | 'onSuccess'
   | 'success-200'
-  | 'success-500'
+  | 'warning'
+  | 'onWarning'
   | 'warning-200'
-  | 'warning-500'
-  | 'steel-100'
-  | 'steel-200'
-  | 'steel-300'
-  | 'steel-500'
-  | 'steel-600'
   | 'highlight'
   | 'notice'
-  | 'linked'
+  | 'link'
   | 'dai'
   | 'background'
-  | 'surface';
+  | 'surface'
+  | 'onsurface'
+  | 'onsurface-100'
+  | 'onsurface-200'
+  | 'onsurface-500'
+  | 'onsurface-600';
 
 export type ColorMode = {
   dark: Partial<Record<ColorVariant, string>>;
@@ -33,60 +37,68 @@ export type ColorMode = {
 export type ColorTheme = Record<ColorVariant, string> & { modes: ColorMode };
 
 export const colors: ColorTheme = {
-  'primary-200': '#B6EDE7',
-  'primary-400': '#2DC1B1',
-  'primary-500': '#1AAB9B',
-  'primary-600': '#098C7D',
-  'primary-900': '#424E4D',
-  'secondary-100': '#F1F1F1',
-  'secondary-200': '#D5D9E0',
-  'secondary-400': '#7E7E88',
-  'secondary-500': '#231536',
-  'success-200': '#E8FCEE',
-  'success-500': '#24A148',
-  'warning-200': '#FDEDE8',
-  'warning-500': '#FF832B',
-  'error-200': '#F8E7EC',
-  'error-500': '#BC2F48',
-  'steel-100': '#FFFFFF',
-  'steel-200': '#D1DEE6',
-  'steel-300': '#9FAFB9',
-  'steel-500': '#708390',
-  'steel-600': '#405361',
-  highlight: '#FFEBBC',
-  notice: '#FACB61',
-  linked: '#447AFB',
-  dai: '#FDC134',
+  primary: '#1AAB9B',
+  onPrimary: '#F1F1F1',
+  secondary: '#231536',
+  onSecondary: '#F1F1F1',
   background: '#F1F4FB',
   surface: '#FFFFFF',
+  onsurface: '#9FAFB9',
+  text: '#231536',
+  muted: '#7E7E88',
+  highlight: '#FFEBBC',
+  notice: '#FACB61',
+  link: '#447AFB',
+  success: '#24A148',
+  onSuccess: '#F1F1F1',
+  warning: '#FF832B',
+  onWarning: '#F1F1F1',
+  error: '#BC2F48',
+  onError: '#F1F1F1',
+  dai: '#FDC134',
+  'primary-active': '#2DC1B1',
+  'primary-disabled': '#B6EDE7',
+  'primary-strong': '#098C7D',
+  'primary-alt': '#424E4D',
+  'success-200': '#E8FCEE',
+  'warning-200': '#FCEDE8',
+  'error-200': '#FCEDE8',
+  'onsurface-100': '#FFFFFF',
+  'onsurface-200': '#D1DEE6',
+  'onsurface-500': '#708390',
+  'onsurface-600': '#405361',
   modes: {
     dark: {
-      'primary-200': '#B6EDE7',
-      'primary-400': '#2DC1B1',
-      'primary-500': '#1AAB9B',
-      'primary-600': '#098C7D',
-      'primary-900': '#424E4D',
-      'secondary-100': '#F1F1F1',
-      'secondary-200': '#D5D9E0',
-      'secondary-400': '#7E7E88',
-      'secondary-500': '#231536',
-      'success-200': '#E8FCEE',
-      'success-500': '#24A148',
-      'warning-200': '#FDEDE8',
-      'warning-500': '#FF832B',
-      'error-200': '#F8E7EC',
-      'error-500': '#BC2F48',
-      'steel-100': '#FFFFFF',
-      'steel-200': '#D1DEE6',
-      'steel-300': '#9FAFB9',
-      'steel-500': '#708390',
-      'steel-600': '#494E52',
+      primary: '#1AAB9B',
+      onPrimary: '#F1F1F1',
+      secondary: '#231536',
+      onSecondary: '#F1F1F1',
+      background: '#0F0F0F',
+      surface: '#212121',
+      onsurface: '#9FAFB9',
+      text: '#F1F1F1',
+      muted: '#7E7E88',
       highlight: '#FFEBBC',
       notice: '#FACB61',
-      linked: '#53B7FF',
+      link: '#447AFB',
+      success: '#24A148',
+      onSuccess: '#F1F1F1',
+      warning: '#FF832B',
+      onWarning: '#F1F1F1',
+      error: '#BC2F48',
+      onError: '#F1F1F1',
       dai: '#FDC134',
-      background: '#0F0F0F',
-      surface: '#212121'
+      'primary-active': '#2DC1B1',
+      'primary-disabled': '#424E4D',
+      'primary-strong': '#098C7D',
+      'primary-alt': '#B6EDE7',
+      'success-200': '#E8FCEE',
+      'warning-200': '#FCEDE8',
+      'error-200': '#FCEDE8',
+      'onsurface-100': '#405361',
+      'onsurface-200': '#708390',
+      'onsurface-500': '#D1DEE6',
+      'onsurface-600': '#FFFFFF'
     }
   }
 };

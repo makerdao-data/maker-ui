@@ -8,6 +8,17 @@ export default {
       file: pkg.module,
       format: 'esm',
       sourcemap: 'inline'
+    },
+    {
+      file: pkg.main,
+      format: 'cjs',
+      sourcemap: 'inline'
+    },
+    {
+      file: pkg.browser,
+      format: 'umd',
+      name: 'bundle',
+      sourcemap: 'inline'
     }
   ],
   external: [
